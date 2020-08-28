@@ -60,6 +60,42 @@ For our system specified by the problem, this requires a one to many Pub-Sub mod
 
 **[google-cloud/pubsub](https://www.npmjs.com/package/@google-cloud/pubsub)** — This is the Node.js client for Cloud Pub/Sub. We will be using this to publish messages and subscribe to topics defined in our pub/sub console
 
+## Building the Publisher Server for the client and subscriber 
+
+A general Pub-Sub system needs to suprt both Push and Pull. The pull is unecessary but I implemented the general function as well for extension purposes. For the general solution to the problem, since all the services oprate on the same Port but different endpoints for the test methods, I wrote general functions for **PubSub Push & Pull, Client Publisher controller and Subscriber Server's subscription control methods. ** 
+
+##### Files and purpose
+_pub-sub-repo.js_ - define all the functions that’ll enable us to carry out all our Pub/Sub related tasks
+_publisher-controller.js_ - validate endpoints and also push message to all subscribing servers for each post when a client publishes a message
+_subscriber-controller.js_ - receive pushed messages to endpoint and display them accordingly. For pull methods, it checks/pulls for new messages sent to topic
+_general.js_ - acts as router controlling all endpoint requests made to display data accordingly for both client and subscribers, as they use the same port. 
+
+#### Endpoints
+_Client_
+**/**  (GET) -  publisher home, confrims route
+**/publish** (POST) - publishes body message to all subsciber endpoints of "topic1" as default
+**/publish/{TOPIC}** (POST) - publishes body message to all subsciber endpoints of TOPIC argument
+**/topic1** (POST) - publishes body message to all subsciber endpoints of "topic1"
+_Subscriber_
+**/event** (POST) - pangaea test code subscribing server endpoint 
+**/subscribe/** (POST and GET) - subscriber home, confrims route
+**/subscribe/:topic or /subscribe/{TOPIC}** (POST) -  Create a subscription for all events of {TOPIC} and forward data to given URL endpoint provided in request body (**For push subscriptions, this must be a globally accessible URL**)
+
+## Publisher Server Requirements
+
+**Setting up a subscription**
+
+Setting up a subscription
+<pre><code>
+POST /subscribe/{TOPIC}
+BODY { url: "http://localhost:8000/event"}
+</code></pre>
+
+Publishing an event
+<pre><code>
+POST /publish/{TOPIC}
+BODY { "message": "hello"}
+</pre></code>
 
 
 
