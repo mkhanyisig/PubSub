@@ -134,7 +134,16 @@ $ curl -X POST -d '{ "url": "**ngrokURL**/event"}' http://localhost:8000/subscri
 $ curl -X POST -H "Content-Type: application/json" -d '{"message": "hello"}' http://localhost:8000/publish/topic1
 </code></pre>
 The **ngrokURL** needs to be active otherwise GCP can't create a PUSH endpoint and will throw error
+
 <img src="https://github.com/mkhanyisig/RandomCodeSamples/blob/master/Screen%20Shot%202020-08-28%20at%207.11.50%20AM.png">
+
+After running the two lines, the following or similar out should apear as print from the console, represnting outputs from both the Client and Subscriber servers.
+
+<img src="https://github.com/mkhanyisig/RandomCodeSamples/blob/master/Screen%20Shot%202020-08-28%20at%207.16.23%20AM.png">
+
+## Extension
+
+
 
 
 
