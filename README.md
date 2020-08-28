@@ -81,6 +81,17 @@ _Subscriber_
 **/subscribe/** (POST and GET) - subscriber home, confrims route
 **/subscribe/:topic or /subscribe/{TOPIC}** (POST) -  Create a subscription for all events of {TOPIC} and forward data to given URL endpoint provided in request body (**For push subscriptions, this must be a globally accessible URL**)
 
+_**Import to note as well are the environment variables in the .env file, as these give access to the Google cloud account where this Publsher Server is hosted and also sets the environment variable wehere system runs, i.e. the GEN variable for the test. The package.json and GCP Servive account json files contains credentials necessary to run th sevrer **_
+
+An example of the .env file fields which you have to set after creating a [GCP](https://console.cloud.google.com) account 
+<pre><code>
+GEN=8000
+
+GCP_PROJ_ID=XXXXXXXXX
+GOOGLE_APPLICATION_CREDENTIALS=XXXXXXXXX.json
+</code></pre>
+
+
 ## Publisher Server Requirements
 
 **Setting up a subscription**
@@ -91,11 +102,42 @@ POST /subscribe/{TOPIC}
 BODY { url: "http://localhost:8000/event"}
 </code></pre>
 
+This POST request does not specify a subscriber ID ad I thus generate a random subscriber name in the format _subscriberXXXX_ , where XXXX is a number in range 1000 to 9999
+
 Publishing an event
 <pre><code>
 POST /publish/{TOPIC}
 BODY { "message": "hello"}
-</pre></code>
+</code></pre>
+
+Publish on whatever is passed in the body (as JSON) to the supplied topic in the URL
+
+**Testing**
+
+Running the general application using yarn, the server is started with the following command
+_To run the command: nodemon src/general.js_
+<pre><code>
+yarn start:pangaea
+</code></pre>
+or 
+<pre><code>
+./start-server.sh
+</code></pre>
+
+To make the port publicly available, Ngrok is highly recommended on another window, to access he local endpoint
+<pre><code>
+./ngrok http 8000
+</code></pre>
+
+<pre><code>
+$ curl -X POST -d '{ "url": "**ngrokURL**/event"}' http://localhost:8000/subscribe/topic1
+$ curl -X POST -H "Content-Type: application/json" -d '{"message": "hello"}' http://localhost:8000/publish/topic1
+</code></pre>
+The **ngrokURL** needs to be active otherwise GCP can't create a PUSH endpoint and will throw error
+
+
+
+
 
 
 
