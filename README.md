@@ -25,6 +25,6 @@ For our system specified by the problem, this requires a one to many Pub-Sub mod
   
   _**Message Broker**_
   
-  _The Publisher Server acts as a message broker relaying messages between these parties or servives servers _
+  _The Publisher Server acts as a message broker relaying messages between these parties or servives servers_
   
   **Cloud Pub/Sub by Google**
