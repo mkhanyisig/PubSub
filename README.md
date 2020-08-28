@@ -137,11 +137,45 @@ The **ngrokURL** needs to be active otherwise GCP can't create a PUSH endpoint a
 
 <img src="https://github.com/mkhanyisig/RandomCodeSamples/blob/master/Screen%20Shot%202020-08-28%20at%207.11.50%20AM.png">
 
-After running the two lines, the following or similar out should apear as print from the console, represnting outputs from both the Client and Subscriber servers.
+After running the two lines, the following or similar out should apear as print from the console, representing outputs from both the Client and Subscriber servers.
 
 <img src="https://github.com/mkhanyisig/RandomCodeSamples/blob/master/Screen%20Shot%202020-08-28%20at%207.16.23%20AM.png">
 
 ## Extension
+
+For a live appication whereby the Client and Subscriber servers run on different PORT. Two different applications can run independtly and send HTTP requests to each other. A notification service can be added as well as a third party subscribed to the topic as well, whereby for each publish event, all subscriptions would receive messages. 
+Using Pull requests, multiple local Ports can listen as well for messages from client publisher. The choice for Push or Pull subscription have different tradeoffs. 
+The code snippets below demonstrate how this was accomplished.  
+-The [iTerm](https://www.iterm2.com/downloads.html) terminal is a great resource to run multiple servers at the same time, listening on multiple ports-
+
+**Environment variables set to**
+<pre><code>
+MAIN_PORT=8001 # publisher server
+PORT_1=8000 # subscriber A
+PORT_2=8003 # subscriber B / Notification
+</code></pre>
+**Run yarn scripts **
+<pre><code>
+//rightmost - terminal 1 (client service)
+yarn start:main
+// middle - terminal 2 (subscriber A service)
+yarn start:subscriber
+// leftmost - terminal 3 (subscriber B or notification service)
+yarn start:notification
+</code></pre>
+
+For the following commands, I got this output
+<pre><code>
+curl -X POST http://localhost:8001/publish/topic1 "Content-Type: application/json" -d '{"message": "hello"}'
+curl -X GET http://localhost:8002/subscribe/pull
+curl -X GET http://localhost:8003/api/notification/pull
+</code></pre>
+
+Sample output
+<img src="https://github.com/mkhanyisig/RandomCodeSamples/blob/master/Screen%20Shot%202020-08-28%20at%207.53.05%20AM.png">
+
+
+
 
 
 
