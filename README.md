@@ -8,7 +8,7 @@
 
 <img src="https://pangaea-interviews.now.sh/_next/static/images/pubsub-diagram-15a833df7c2a0fd11cade0630fe8e8ba.png">
 
-# Solution
+## Solution
 
 **Problem domain and proposed solution**
 
