@@ -11,3 +11,20 @@
 # Solution
 
 **Problem domain and proposed solution**
+
+For our system specified by the problem, this requires a one to many Pub-Sub model, where one Client(Publisher), Posts a message through the Publisher server which reroutes the message to subscribers. For such an event driven application, where the events are represented as messages, I chose the following design specifications. 
+
+  **Services**
+  
+  **_Independent Units_**
+  
+  __The Client(Publisher) and Subscribing Server(Subscriber) represent the indepent endpoints communicating within this model__
+  
+  **Node JS**
+  
+  
+  **__Message Broker__**
+  
+  __The Publisher Server acts as a message broker relaying messages between these parties or servives servers __
+  
+  **Cloud Pub/Sub by Google**
