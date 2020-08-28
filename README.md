@@ -1,6 +1,6 @@
 # Pub-Sub Challenge
 
-** Problem Statement **
+**Problem Statement
 
 Pangaea BE Coding Challenge (https://pangaea-interviews.now.sh/be). Recreating a Publisher Server (pub / sub) system using HTTP requests. Users should be able to 
 1. Set up a subscription for a topic giving endpoint URL 
@@ -10,4 +10,4 @@ Pangaea BE Coding Challenge (https://pangaea-interviews.now.sh/be). Recreating a
 
 # Solution
 
-** Problem domain and proposed solution **
+**Problem domain and proposed solution
