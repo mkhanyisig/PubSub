@@ -12,7 +12,7 @@
 
 #### Problem domain and proposed solution
 
-For our system specified by the problem, this requires a one to many Pub-Sub model, where one Client(Publisher), Posts a message through the Publisher server which reroutes the message to subscribers. For such an event driven application, where the events are represented as messages, I chose the following design specifications. 
+For our system specified by the problem, this requires a one to many Pub-Sub model, where one Client(Publisher), Posts a message through the Publisher server which reroutes the message to all subscribed servers or subscribers on each Post. Servers can subscribe to topic as well. For such an event driven application, where the events are represented as inter-communication messages, I chose the following design specifications. 
 
   #### Services
   
