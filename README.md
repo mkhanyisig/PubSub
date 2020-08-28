@@ -16,14 +16,14 @@ For our system specified by the problem, this requires a one to many Pub-Sub mod
 
   ####Services
   
-  _ **Independent Units** _
+  _**Independent Units**_
   
   __The Client(Publisher) and Subscribing Server(Subscriber) represent the indepent endpoints communicating within this model__
   
   **Node JS**
   
   
-  _ **Message Broker** _
+  _**Message Broker**_
   
   __The Publisher Server acts as a message broker relaying messages between these parties or servives servers __
   
