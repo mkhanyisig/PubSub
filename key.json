@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "pangaeatakehome",
+  "private_key_id": "387d6eb32a799deb129940d5a06183f91bfabb3a",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQClzFX6jGINz1Bg\nPjFRAdZbRTDAGt/P/lnpzN9MO+yyKkaRoqX9uN/jAR58LvDHejLzWBEVYTmp5eKW\nUVPWQJ9S52CFUY7qiay6IBcFur2MIU5xkXnvv55IZLdGHLncZEKDXQNGD6PYaojt\nvEUFAVjviJpK1lhYi/nP+khbqBYKe1QicuxtFrVNei3Ka2zpnoKPViHRkJFVFLnd\nN8CLUzN4/VQobSBXy6nkEMVlLNHT2fzasYhsmp0WwWRwGFEKDZKbRTmWV4BaFaSe\no2ggxVshK+ah/vf8qDZvQDjPF6uv4tOZxp3CbwXSQamra/CQ3j8NxuHOhtEi7Lyg\nEcsc/VQTAgMBAAECggEAIwgvXI7AAyn8UjGh6vtn5wYSHG0xQDn+lpOW1P1OcIDV\nQ11qFFe1Wro4TkX+0y9DR76icXGHJRpxS5Colbs2zuYbs1+9wlnPuM4h/zBrb4n0\nELQL3zgOQj6hqPtV3DcFBMuo7utME+TCxPTEYp/bwlULQOfUZ/U/lg3Mry0vZww7\n7u6hNlt3SC2/J+RVhm2EGSkHkAfK7UpM+u+wTFvtycfZTtmRSGj7JLaVz54JbLba\n+dtyuerkFLFF495Ze2cid8xUGaKk5uPD94e8avJWFT/CZzO1IKRUv7+JAnv9iPxN\nJOBv1C5L0bNZp+9ehtkdmU43mSc+EOOhuN72FZJlcQKBgQDS+6nfcy69bJBWaW6p\n25gRXEiaGPgWYDXO8GLX556xNbmjUyMHknl6t6l4CNp9VNrT6dqX5sGHfYvuPm3z\noSJvjoiLfpTJ9zDWx2nhNaEJ0g+5yrbSfyfuO5O0MDXWCJpt2bRl91Gmka1dENL7\noPRVGCwSN04JMPTlbfyTRX96kQKBgQDJLJRzxh7YOdq0FZ2cQ5c7i++5j6icb2PH\nhvb1J4ONY1sAV6wFOvfPI39tadtiIomf7dPegBsHIXrZ+bgYJK40smmxgR0wBYDN\nANqYxg+x2NeAhgKxj3sGRCQBLVNApd8ezYKBNnUtMHSWV/gz9wKYW9w4Uo3wEakc\nfDZ1cK0OYwKBgCIMGs3EeLZ43pITUZh3p4KlsdGsVdzGiehrQog1CJbwZJTGxdBj\nAtea6+5C/39aQjYQdwYsZu7Gg95elL/MMRJvnflk4/3zth3y8FM3pFVBYOhKnlY5\nzufTFXLulMGFgeZYS5Ro5PRMbf2myWVyA/v3eqU155H0JJEhvrDFdl0BAoGBAJe0\nO3qWw7nQ3wEAb+tf+RKZczyefcsCIN9dAqxakNS1QPGgK4OCNU+J+FT9B8gYPWpS\nAXx/ZGJbN/ZaXx4twwTQKe4GbIlDDR8K7s1YRouZ9uDfrfZSOba++du9X1OYAgqL\ndUeVVoWuTaz2R6CAO//C/e2nK4wG9V0aukKTppz7AoGBAJHIzwVpgfnm9LR3OF5M\nrHoU506NS07jKZpmY9t6oRTiiEoKxUrAIR5GJUVYF428Rf/n7ENqtDHAhi2HKA0b\n3aHT7uZiq/xixmztYQd/rJ8UXtleS79KF94iHcENnXyfAbN3wd471LtWhSZsF4DX\n43nkGJ2DjdaNUuUxH7/QR8Y/\n-----END PRIVATE KEY-----\n",
+  "client_email": "pub-sub-pangaea@pangaeatakehome.iam.gserviceaccount.com",
+  "client_id": "103946202330351613356",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pub-sub-pangaea%40pangaeatakehome.iam.gserviceaccount.com"
+}
