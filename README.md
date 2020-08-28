@@ -22,9 +22,17 @@ For our system specified by the problem, this requires a one to many Pub-Sub mod
   
   **Node JS**
   
+  This is a great backend platform primarily used for non-blocking, event-driven servers, due to its single-threaded nature.It is robustly designed with real-time, push-based architectures in mind and thus serves our purpose well. It also has great documentation, modules and frameworks which abstract the application process and creates a smooth server environment for REST applications. 
   
   _**Message Broker**_
   
   _The Publisher Server acts as a message broker relaying messages between these parties or servives servers_
   
   **Cloud Pub/Sub by Google**
+  
+  Google Pub/Sub being a message broker can receive message from the the client(publisher), and act as a relay between the the subscribers and the other services. The Cloud Pub-Sub architecture takes care of errors like anomalies when making HTTP requests like service downtimes, system failures and scaling problems when new services are introduced. More features or services can be added whilst keeping the system in Rhythm. 
+  
+ ## Implementation
+ 
+ 
+
